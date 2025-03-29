@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESP32 Car Control</title>
+    <link rel="stylesheet" href="WebStyle.css">
+</head>
+<body>
+    <h1>ESP32 Car Control</h1>
+
+    <!-- Stored Information Section -->
+    <div id="info-section">
+        <h2>Last Session Info</h2>
+        <p id="last-command">Last Command: None</p>
+    </div>
+
+    <!-- Drive Car Button -->
+    <button id="drive-btn">🚗 Drive Car</button>
+
+    <!-- Control Selection -->
+    <div id="control-selection" style="display:none;">
+        <h2>Select Control Method</h2>
+        <button onclick="selectControl('voice')">🎤 Voice Controlled</button>
+        <button onclick="selectControl('button')">🎮 Button Gesture</button>
+    </div>
+
+    <!-- Connection & Password Section -->
+    <div id="connection-section" style="display:none;">
+        <button onclick="connectESP32()">🔗 Connect Car</button>
+    </div>
+
+    <div id="password-section" style="display:none;">
+        <p>Enter Password:</p>
+        <input type="password" id="password">
+        <button onclick="checkPassword()">Login</button>
+    </div>
+
+    <!-- Control Panels -->
+    <div id="button-controls" style="display:none;">
+        <button onclick="sendCommand('FORWARD')">⬆ Forward</button><br>
+        <button onclick="sendCommand('LEFT')">⬅ Left</button>
+        <button onclick="sendCommand('RIGHT')">➡ Right</button><br>
+        <button onclick="sendCommand('BACKWARD')">⬇ Backward</button><br>
+        <button onclick="sendCommand('STOP')">⏹ Stop</button>
+    </div>
+
+    <div id="voice-controls" style="display:none;">
+        <button onclick="startVoiceControl()">🎤 Start Voice Control</button>
+    </div>
+
+    <script src="WebPageScript.js"></script>
+</body>
+</html>

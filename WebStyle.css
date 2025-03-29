@@ -1,0 +1,18 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: white;
+}
+
+button {
+    font-size: 18px;
+    padding: 10px;
+    margin: 10px;
+    width: 150px;
+    cursor: pointer;
+}
+
+#info-section, #control-selection, #connection-section, #password-section, #button-controls, #voice-controls {
+    margin-top: 20px;
+}
